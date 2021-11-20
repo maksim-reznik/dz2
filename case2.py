@@ -15,3 +15,6 @@ s.plot(kind= 'hist')
 s1 = z
 s1.plot(kind='hist')
 plt.show()
+
+
+# на сколько  смертность детей меньше взрослых
