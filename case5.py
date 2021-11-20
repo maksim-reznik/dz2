@@ -7,7 +7,7 @@ df.fillna(-1, inplace=True)
 
 x = df['Status Rocket']
 z = df['Status Mission']
-c = df[df['Status Mission'] == 'Status Rocket'].values_count()
+c = df[df['Status Mission'] == 'Status Rocket'].groupby()
 print(f'Количество Миссий где статус миссии и ракеты равны {c}')
 s = pd.Series(data=x, index=z)
 s.plot()
