@@ -7,9 +7,8 @@ df.fillna(-1, inplace=True)
 
 x = df[df['parental level of education' == 'high school']]
 x = x[x['math score'] >= 85].values_count()
-print(f'В {x} случаях да, в {len(df.index) - x} нет')
-if (x / len(df.index)/100) >= 85:
-    print('Гипотеза подтверждена')
+
+print(x / len(df.index)*100)
 
 s = pd.Series(data=df['parental level of education'], index=df['math score'])
 s.plot()
